@@ -1,4 +1,5 @@
 {{ partial "head.html" . }}
+
 <body>
 <div id="container">
     {{ partial "header.html" . }}
@@ -14,7 +15,8 @@
                 {{ end }}
                 <div class="article-meta">
                     <a href="{{ .RelPermalink }}" class="article-date">
-                        <time datetime='{{ .Date.Format "2006-01-02T15:04:05.000-07:00" }}' itemprop="datePublished">{{ .Date.Format "2006-01-02" }}</time>
+                        <time datetime='{{ .Date.Format "2006-01-02T15:04:05.000-07:00" }}'
+                            itemprop="datePublished">{{ .Date.Format "2006-01-02" }}</time>
                     </a>
                     {{ $Site := .Site }}
                     {{ if .Params.categories }}
@@ -24,7 +26,8 @@
                             {{ if gt $i 0 }}
                             <span>&gt;</span>
                             {{ end }}
-                            <a class="article-category-link" href="{{ $Site.BaseURL }}/categories/{{ $e | urlize }}">{{ $e }}</a>
+                            <a class="article-category-link"
+                                href="{{ $Site.BaseURL }}/categories/{{ $e | urlize }}">{{ $e }}</a>
                             {{ end }}
                         </div>
                     </div>
@@ -38,7 +41,7 @@
                 <div class="article-entry" itemprop="articleBody">
                     <p>
                         {{ if .Params.featuredImage }}<img src="{{.Params.featuredImage}}"><br>{{ end }}
-                    {{ .Summary }}
+                        {{ .Content }}
                     </p>
                     <p class="article-more-link">
                         <a href="{{ .RelPermalink }}">Read More</a>
@@ -66,4 +69,5 @@
     {{ partial "footer.html" . }}
 </div>
 </body>
+
 </html>
