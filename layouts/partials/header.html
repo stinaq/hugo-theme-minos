@@ -3,6 +3,7 @@
         <div id="header-inner" class="inner">
             <a id="main-nav-toggle" class="nav-icon" href="javascript:;"></a>
             <a id="logo" class="logo-text" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+            <p class="tagline">{{.Site.Data.about.Tagline}}</p>
             <nav id="main-nav">
                 {{ range .Site.Menus.main }}
                 <a class="main-nav-link" href="{{ .URL }}">{{ .Name }}</a>
