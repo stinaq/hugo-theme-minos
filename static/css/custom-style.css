@@ -1,0 +1,28 @@
+.logo-text {
+  font-size: 40px;
+}
+
+@media screen and (max-width: 839px) {
+  #main-nav-toggle {
+    display: none;
+  }
+}
+
+#logo {
+  display: block;
+  text-align: center;
+  float: none;
+  margin-right: 0;
+}
+
+.tagline {
+  clear: both;
+  text-align: center;
+  font-size: 20px;
+  font-family: 'open_sanslight';
+}
+
+#header {
+  border: none;
+  margin-bottom: 30px;
+}
